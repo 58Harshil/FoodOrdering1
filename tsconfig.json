@@ -1,12 +1,22 @@
 {
   "compilerOptions": {
     "strict": true,
-    "jsx": "react-native",   // Add this line for JSX support in React Native
+    "baseUrl": ".",
+    "paths":{
+      "@/components/*:[src/components/*]"
+    },
+    "jsx": "react-native",
     "paths": {
       "@/*": [
         "./src/*"
       ]
     }
-  }
+  },
+  "extends": "expo/tsconfig.base",
+  "include": [
+    "**/*.ts",
+    "**/*.tsx",
+    ".expo/types/**/*.ts",
+    "expo-env.d.ts"
+  ]
 }
-
